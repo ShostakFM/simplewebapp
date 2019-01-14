@@ -1,4 +1,10 @@
 package com.godeltech.mastery.task.service;
 
-public class EmployeeService {
+import com.godeltech.mastery.task.dto.Employee;
+
+import java.util.List;
+
+public interface EmployeeService {
+
+    List<Employee> ViewAll();
 }
