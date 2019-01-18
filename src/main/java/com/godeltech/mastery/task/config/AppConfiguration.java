@@ -1,41 +1,32 @@
 package com.godeltech.mastery.task.config;
 
-import com.godeltech.mastery.task.dao.EmployeeDao;
-import com.godeltech.mastery.task.dao.EmployeeDaoImpl;
-import com.godeltech.mastery.task.service.EmployeeServiceImpl;
-import com.godeltech.mastery.task.service.EmployeeService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
-import javax.sql.DataSource;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 @Configuration
-public class AppConfiguration {
+@EnableWebMvc
+public class AppConfiguration extends WebMvcConfigurerAdapter {
 
     @Bean
-    public JdbcTemplate getJdbcTemplate() {
-        return new JdbcTemplate(getDataSource());
+    public ViewResolver getViewResolver() {
+        FreeMarkerViewResolver freeMarkerViewResolver = new FreeMarkerViewResolver();
+        freeMarkerViewResolver.setOrder(1);
+        freeMarkerViewResolver.setSuffix(".ftl");
+        freeMarkerViewResolver.setPrefix("");
+        return freeMarkerViewResolver;
+
     }
 
     @Bean
-    public DataSource getDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres?useSll=false");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("admin");
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        return dataSource;
-    }
+    public FreeMarkerConfigurer getFreeMarkerConfigurer() {
+        FreeMarkerConfigurer freeMarkerConfigurer = new FreeMarkerConfigurer();
+        freeMarkerConfigurer.setTemplateLoaderPaths("/", "/WEB-INF/views/");
+        return freeMarkerConfigurer;
 
-    @Bean
-    public EmployeeDao getEmployeeDao() {
-        return new EmployeeDaoImpl();
     }
-
-   /* @Bean
-    public EmployeeService getEmployeeService() {
-        return new EmployeeServiceImpl();
-    }*/
 }
