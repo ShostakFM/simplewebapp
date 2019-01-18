@@ -13,7 +13,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     public EmployeeDao employeeDao;
 
-    public List<Employee> ViewAll() {
-        return employeeDao.ViewAll();
+    public List<Employee> viewAll() {
+        return employeeDao.viewAll();
     }
 }

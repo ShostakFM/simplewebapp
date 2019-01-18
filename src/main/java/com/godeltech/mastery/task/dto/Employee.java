@@ -3,49 +3,55 @@ package com.godeltech.mastery.task.dto;
 import java.util.Date;
 
 public class Employee {
-    private Long employeeId;
-    private String firstName;
-    private String lastName;
-    private String job_title;
+    private Long employee_id;
+    private String first_name;
+    private String last_name;
     private Long department_id;
+    private String job_title;
     private Gender gender;
     private Date date_of_birth;
+
+    public String getDate_of_birth_str() {
+        return date_of_birth_str;
+    }
+
+    private String date_of_birth_str;
 
     public Employee() {
     }
 
-    public Employee(Long employeeId, String firstName, String lastName, String job_title, Long department_id, Gender gender, Date date_of_birth) {
-        this.employeeId = employeeId;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Employee(Long employee_id, String first_name, String last_name, String job_title, Long department_id, Gender gender, Date date_of_birth) {
+        this.employee_id = employee_id;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.job_title = job_title;
         this.department_id = department_id;
         this.gender = gender;
         this.date_of_birth = date_of_birth;
     }
 
-    public Long getEmployeeId() {
-        return employeeId;
+    public Long getEmployee_id() {
+        return employee_id;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployee_id(Long employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getJob_title() {
@@ -78,5 +84,6 @@ public class Employee {
 
     public void setDate_of_birth(Date date_of_birth) {
         this.date_of_birth = date_of_birth;
+        this.date_of_birth_str = date_of_birth.toString();
     }
 }

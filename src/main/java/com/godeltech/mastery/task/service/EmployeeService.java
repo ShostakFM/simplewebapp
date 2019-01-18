@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface EmployeeService {
 
-    List<Employee> ViewAll();
+    List<Employee> viewAll();
 }
