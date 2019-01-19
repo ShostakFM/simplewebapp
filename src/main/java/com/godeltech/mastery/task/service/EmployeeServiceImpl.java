@@ -16,4 +16,20 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> viewAll() {
         return employeeDao.viewAll();
     }
+
+    public Employee getById(int id) {
+        return employeeDao.getById(id);
+    }
+
+    public void add(Employee employee) {
+        employeeDao.add(employee);
+    }
+
+    public void remove(int id) {
+        employeeDao.remove(id);
+    }
+
+    public void update(Employee employee) {
+        employeeDao.update(employee);
+    }
 }

@@ -11,12 +11,6 @@ public class Employee {
     private Gender gender;
     private Date date_of_birth;
 
-    public String getDate_of_birth_str() {
-        return date_of_birth_str;
-    }
-
-    private String date_of_birth_str;
-
     public Employee() {
     }
 
@@ -84,6 +78,5 @@ public class Employee {
 
     public void setDate_of_birth(Date date_of_birth) {
         this.date_of_birth = date_of_birth;
-        this.date_of_birth_str = date_of_birth.toString();
     }
 }

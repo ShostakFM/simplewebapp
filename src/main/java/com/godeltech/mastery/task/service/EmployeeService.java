@@ -7,4 +7,12 @@ import java.util.List;
 public interface EmployeeService {
 
     List<Employee> viewAll();
+
+    Employee getById(int id);
+
+    void add(Employee employee);
+
+    void remove(int id);
+
+    void update(Employee employee);
 }
