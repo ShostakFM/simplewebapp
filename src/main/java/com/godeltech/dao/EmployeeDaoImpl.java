@@ -20,7 +20,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public List<Employee> findAll() {
-        String sql = "SELECT * FROM employee";
+        String sql = "SELECT * FROM employee ORDER BY employee_id";
         return jdbcTemplate.query(sql, new EmployeeMapper());
     }
 

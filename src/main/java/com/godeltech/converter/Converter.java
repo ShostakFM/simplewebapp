@@ -16,7 +16,7 @@ public interface Converter {
             @Mapping(target = "departmentId", source = "entity.departmentId"),
             @Mapping(target = "jobTitle", source = "entity.jobTitle"),
             @Mapping(target = "gender", source = "entity.gender"),
-            @Mapping(target = "dateOfBirth", source = "entity.dateOfBirth",  dateFormat = "dd-MM-yyyy HH:mm:ss"),
+            @Mapping(target = "dateOfBirth", source = "entity.dateOfBirth", dateFormat = "dd-MM-yyyy")
     })
     EmployeeDTO employeeToEmployeeDTO(Employee entity);
 
@@ -27,10 +27,8 @@ public interface Converter {
             @Mapping(target = "departmentId", source = "dto.departmentId"),
             @Mapping(target = "jobTitle", source = "dto.jobTitle"),
             @Mapping(target = "gender", source = "dto.gender"),
-            @Mapping(target = "dateOfBirth", source = "dto.dateOfBirth",  dateFormat = "dd-MM-yyyy HH:mm:ss"),
+            @Mapping(target = "dateOfBirth", source = "dto.dateOfBirth", dateFormat = "dd-MM-yyyy")
     })
     Employee employeeDTOToEmployee(EmployeeDTO dto);
-
-
 
 }
