@@ -8,7 +8,6 @@ import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -25,11 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public List<EmployeeDTO> findAll() {
         List <Employee> employees = employeeDao.findAll();
-        List<EmployeeDTO> employeeDTOS = new ArrayList<>();
-        for (Employee employee: employees) {
-            employeeDTOS.add(converter.employeeToEmployeeDTO(employee));
-        }
-        return employeeDTOS;
+        return converter.EmployeeListToEmployeeDTOList(employees);
     }
 
     public EmployeeDTO getById(int id) {
