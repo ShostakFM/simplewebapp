@@ -19,8 +19,12 @@ import java.util.List;
 @RequestMapping("employees")
 public class EmployeeController {
 
+    public final EmployeeService employeeService;
+
     @Autowired
-    public EmployeeService employeeService;
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @ApiOperation(value = "Gets all employees", nickname = "EmployeeController.findAll")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "Employees")})

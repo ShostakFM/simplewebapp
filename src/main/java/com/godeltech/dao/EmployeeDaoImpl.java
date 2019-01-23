@@ -11,8 +11,12 @@ import java.util.List;
 @Component
 public class EmployeeDaoImpl implements EmployeeDao {
 
+    public final JdbcTemplate jdbcTemplate;
+
     @Autowired
-    public JdbcTemplate jdbcTemplate;
+    public EmployeeDaoImpl(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     @Override
     public List<Employee> findAll() {
