@@ -2,7 +2,6 @@ package com.godeltech.service;
 
 import com.godeltech.dto.EmployeeDTO;
 
-import java.text.ParseException;
 import java.util.List;
 
 public interface EmployeeService {
@@ -11,9 +10,9 @@ public interface EmployeeService {
 
     EmployeeDTO getById(int id);
 
-    void create(EmployeeDTO employeeDTO) throws ParseException;
+    void create(EmployeeDTO employeeDTO);
 
-    void update(EmployeeDTO employeeDTO) throws ParseException;
+    void update(EmployeeDTO employeeDTO);
 
     void delete(int id);
 }

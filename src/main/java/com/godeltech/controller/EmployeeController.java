@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.ParseException;
 import java.util.List;
 
 @Api
@@ -45,7 +44,7 @@ public class EmployeeController {
     @PostMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public void create (@RequestBody EmployeeDTO employeeDTO) throws ParseException {
+    public void create (@RequestBody EmployeeDTO employeeDTO){
         employeeService.create(employeeDTO);
     }
 
@@ -61,7 +60,7 @@ public class EmployeeController {
     @PutMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public void update(@RequestBody EmployeeDTO employeeDTO) throws ParseException{
+    public void update(@RequestBody EmployeeDTO employeeDTO){
         employeeService.update(employeeDTO);
     }
 }
