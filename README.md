@@ -1,8 +1,5 @@
 ### Practical task
 
-Using the provided skeleton, implement the REST service.
-
-Useful link: https://spring.io/guides/gs/rest-service/
-
-In addition you could use Swagger to provide API documentation.
-        
+This is the Simple Web App that provides REST API and allows you to make CRUD operations with employeedb database.
+It consists of 3 main layers: controller-service-dao.
+It has Swagger documetation.
