@@ -1,4 +1,4 @@
-package com.godeltech.config;
+package com.shostak.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 @PropertySources({
         @PropertySource("classpath:db.properties")
 })
-@ComponentScan(basePackages = {"com.godeltech.dao", "com.godeltech.service"})
+@ComponentScan(basePackages = {"com.shostak.dao", "com.shostak.service"})
 public class AppConfiguration {
 
     @Value("${db.driverClassName}")

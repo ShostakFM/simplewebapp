@@ -1,7 +1,7 @@
-package com.godeltech.dao;
+package com.shostak.dao;
 
-import com.godeltech.entity.Employee;
-import com.godeltech.mapper.EmployeeMapper;
+import com.shostak.entity.Employee;
+import com.shostak.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

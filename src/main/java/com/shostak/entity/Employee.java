@@ -1,4 +1,4 @@
-package com.godeltech.entity;
+package com.shostak.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +20,7 @@ public class Employee {
     private Date dateOfBirth;
 
     public void setGender(String gender) {
-        this.gender = Gender.valueOf(gender);
+        this.gender = Gender.valueOf(gender.toUpperCase());
     }
     public String getGender() {
         return gender.toString();

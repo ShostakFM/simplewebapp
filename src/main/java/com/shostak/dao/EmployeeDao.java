@@ -1,6 +1,6 @@
-package com.godeltech.dao;
+package com.shostak.dao;
 
-import com.godeltech.entity.Employee;
+import com.shostak.entity.Employee;
 
 import java.util.List;
 
