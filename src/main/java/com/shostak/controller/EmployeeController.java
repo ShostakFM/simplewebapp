@@ -1,8 +1,8 @@
-package com.godeltech.controller;
+package com.shostak.controller;
 
 
-import com.godeltech.dto.EmployeeDTO;
-import com.godeltech.service.EmployeeService;
+import com.shostak.dto.EmployeeDTO;
+import com.shostak.service.EmployeeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

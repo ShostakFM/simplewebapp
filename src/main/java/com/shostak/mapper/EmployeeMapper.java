@@ -1,6 +1,6 @@
-package com.godeltech.mapper;
+package com.shostak.mapper;
 
-import com.godeltech.entity.Employee;
+import com.shostak.entity.Employee;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

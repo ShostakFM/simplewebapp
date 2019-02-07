@@ -1,4 +1,4 @@
-package com.godeltech.entity;
+package com.shostak.entity;
 
 public enum Gender {
     MALE,

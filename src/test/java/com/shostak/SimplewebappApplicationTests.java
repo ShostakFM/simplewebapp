@@ -1,4 +1,4 @@
-package com.godeltech;
+package com.shostak;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

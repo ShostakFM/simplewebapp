@@ -1,7 +1,7 @@
-package com.godeltech.converter;
+package com.shostak.converter;
 
-import com.godeltech.dto.EmployeeDTO;
-import com.godeltech.entity.Employee;
+import com.shostak.dto.EmployeeDTO;
+import com.shostak.entity.Employee;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

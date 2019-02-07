@@ -1,9 +1,9 @@
-package com.godeltech.service;
+package com.shostak.service;
 
-import com.godeltech.converter.Converter;
-import com.godeltech.dao.EmployeeDao;
-import com.godeltech.dto.EmployeeDTO;
-import com.godeltech.entity.Employee;
+import com.shostak.converter.Converter;
+import com.shostak.dao.EmployeeDao;
+import com.shostak.dto.EmployeeDTO;
+import com.shostak.entity.Employee;
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

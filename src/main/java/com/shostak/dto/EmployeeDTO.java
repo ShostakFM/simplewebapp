@@ -1,4 +1,4 @@
-package com.godeltech.dto;
+package com.shostak.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

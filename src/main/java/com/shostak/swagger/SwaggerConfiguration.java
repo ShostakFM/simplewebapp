@@ -1,4 +1,4 @@
-package com.godeltech.swagger;
+package com.shostak.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class SwaggerConfiguration {
     public Docket swaggerSettings() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.godeltech.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.shostak.controller"))
                 .build();
     }
 }

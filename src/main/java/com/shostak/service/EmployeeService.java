@@ -1,6 +1,6 @@
-package com.godeltech.service;
+package com.shostak.service;
 
-import com.godeltech.dto.EmployeeDTO;
+import com.shostak.dto.EmployeeDTO;
 
 import java.util.List;
 
